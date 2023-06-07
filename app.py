@@ -5,9 +5,10 @@ import numpy as np
 app = Flask(__name__)
 
 # Memuat model
-model = tf.keras.models.load_model('')
+model = tf.keras.models.load_model("deliverable/model.h5")
 
 # Endpoint untuk prediksi
+
 
 @app.route('/prediksi', methods=['POST'])
 def prediksi_rating():
