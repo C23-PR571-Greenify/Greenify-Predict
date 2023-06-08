@@ -2,3 +2,4 @@ flask
 numpy
 tensorflow
 joblib
+scikit-learn
