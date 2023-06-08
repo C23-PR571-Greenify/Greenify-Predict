@@ -1,13 +1,24 @@
 from flask import Flask, request, jsonify
 import tensorflow as tf
 import numpy as np
+import joblib
 
 app = Flask(__name__)
 
-# Memuat model
-model = tf.keras.models.load_model("deliverable/model.h5")
+model_greenify = "deliverable/model.h5"
+model_testing = "deliverable/modeltest.h5"
 
-# Endpoint untuk prediksi
+
+try:
+    # Membaca model dari file .h5
+    model = tf.keras.models.load_model(model_greenify)
+    print("Model berhasil dimuat.")
+except (OSError, IOError) as e:
+    print("Gagal memuat model:", str(e))
+
+# scalerTourism = joblib.load('deliverable/scalerTourism.save')
+# scalerUser = joblib.load('deliverable/scalerUser.save')
+# scalerTarget = joblib.load('deliverable/scalerTarget.save')
 
 
 @app.route('/prediksi', methods=['POST'])
@@ -40,4 +51,4 @@ def prediksi_rating():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
