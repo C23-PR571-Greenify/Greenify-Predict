@@ -46,8 +46,8 @@ Follow this step to run this repostory code in your local device:
    python app.py
    ```
   
-  <!-- Usage -->
-## :eyes: Usage
+  <!-- Note -->
+## 📌 Note
  As the predict repository is dedicated solely to functioning as a backend feature for the purpose of predicting eco-friendly tourist destinations, comprehensive documentation, usage instructions, and API endpoints can be conveniently accessed and referred to at this location: <a href="https://github.com/C23-PR571-Greenify/Greenify-Backend">**HERE**</a> for more detail
   
  <!-- TechStack -->
